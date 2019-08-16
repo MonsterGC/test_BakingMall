@@ -1,0 +1,58 @@
+<block class='hidePay'>
+  <form class='address-info'>
+    <view class='namephone'>
+      <view class="infoName">
+        <input placeholder-class="input-placeholder" placeholder="请填写收货人姓名" value='{{Name}}' bindchange="name"/>
+      </view>
+      <view class="infophone">
+        <input type='number' placeholder-class="input-placeholder" placeholder="请填写收货人手机号码" value='{{Phone}}' bindchange="phone"/>
+      </view>
+    </view>
+    <view class='concise-add'>
+      <input placeholder-class="input-placeholder" placeholder="请填写收货地址" value='{{conciseAddress}}' bindchange="conciseaddress"/>
+      <view class='add-img'>
+        <image src='../../images/icon_dizhi.png'></image>
+      </view>
+    </view>
+    <input class="infoaddress" placeholder-class="input-placeholder" placeholder="请填写详细地址（街道号、门牌号等）" value='{{Address}}' bindchange="address"/>
+  </form>
+  <view wx:for="{{cartShopList}}" wx:if="{{item.checked==true}}" class="hide-shop-list">
+    <view class="cart-shop-info" data-item-index="{{index}}" id='{{item.goId}}'>
+      <view>
+        <image class="cart-shop-img" src="{{item.caPicture}}"></image>
+      </view>
+
+      <view class="cart-info-mess">
+        <view>
+          <text class="cart-shop-title">{{item.goName}}</text>
+        </view>
+        <view class="cart-remark-num">
+          <text class="cart-shop-price">￥{{item.gkPrice}}</text>
+          <view class="cart-select">
+            <view class="option" data-index="{{index}}" catchtap="itemCountSub">-</view>
+            <view class="option">{{item.caGoodsum}}</view>
+            <view class="option" data-index="{{index}}" catchtap="itemCountAdd">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <form>
+    <view class="mess">
+      <view>
+        <image mode='widthFix' src='../../images/icon_liuyan.png'></image>
+      </view>
+      <input placeholder-class="input-placeholder" placeholder="买家留言（25字以内）" value='{{Message}}' bindchange="message"/>
+    </view>
+  </form>
+
+  <view class="hide-bottom-pay">
+    <view class="total-count-money">
+      <view>
+        <text>合计:</text>￥{{allPrice}}元</view>
+      <view class="yf_msg">运费:{{goSentpay}}</view>
+    </view>
+    <button class="btn-area-button" bindtap='pay'>去支付</button>
+  </view>
+
+</block>

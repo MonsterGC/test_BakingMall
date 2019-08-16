@@ -1,0 +1,36 @@
+page{
+  background: #fff;
+}
+.profile {
+  padding: 5px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.column-title {
+  color: #fad03c;
+  border-left: 2px solid #fad03c;
+  padding-left: 6px;
+  font-weight: bold;
+  line-height: 17px;
+  margin: 7px 0px;
+}
+
+.intro-area{
+  border: 1px solid #E6E6E6;
+  padding: 8px;
+}
+
+.textarea-placeholder{
+  color: #E6E6E6;
+}
+
+.weui-textarea-counter{
+  color: #E6E6E6;
+}
+
+.weui-btn{
+  background: #fad03c;
+  color: #fff;
+  border: 1px solid #fad03c;
+}

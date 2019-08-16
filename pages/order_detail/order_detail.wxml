@@ -1,0 +1,76 @@
+<view class="allOrder">
+  <text bindtap="tosellerorder" class="allOrder-left icon-back">订单详情</text>
+</view>
+<!-- 收货地址 -->
+<view class="address">
+  <view class='add-info'>
+    <text>收货人：{{orderDatails.myManname}}</text>
+    <text>{{orderDatails.myMannumber}}</text>
+  </view>
+  <view>
+    收货地址：
+    <text>{{orderDatails.myManaddress}} | {{orderDatails.myMandetail}}</text>
+  </view>
+  <view class='add-mess'>
+    卖家留言：
+    <view>{{orderDatails.myMessage}}</view>
+  </view>
+</view>
+
+
+
+<!-- 商品订单详情 -->
+<view class="productDetails">
+
+  <view class="orderDetails">
+    <view class="orderListDetails" wx:for="{{orderDatails.goodList}}"  bindtap="toProductDetails" id='{{item.ogGoodid}}'>
+      <view class="productImg">
+        <image src="{{item.ogPicture}}"></image>
+      </view>
+      <view class="productInfo">
+        <view class="productTitle">{{item.goName}}</view>
+        <view>
+          <text class="productPrice">￥{{item.unit_all_price}}</text>
+          <text class="productQuantity">×{{item.ogGoodsum}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="productCount">
+      <button class='btnorg' wx:if="{{orderDatails.myState==1}}" data-id="{{orderDatails.myId}}" catchtap='topay'>去付款</button>
+      <button class='btnorg' wx:if="{{orderDatails.myState==2}}" data-id="{{orderDatails.myId}}" catchtap='tobesure'>确认收货</button>
+    </view>
+  </view>
+</view>
+
+<!--费用详情  -->
+<view class="orderDetails">
+  <view class="orderDetailsStatus">
+    <view class='price'>商品总价
+      <text class="priceNum">￥{{allPrice}}</text>
+    </view>
+    <view class='price'>运费(快递)
+      <text class="priceNum">￥{{orderDatails.myAllSentpay}}</text>
+    </view>
+    <view class='priceFinal'>实付款
+      <text class="priceNum2">￥{{orderDatails.myAllpay}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 订单详情 -->
+<view class="orderDetails">
+  <view class="orderDetailsStatus">
+    <view>订单编号:
+      <text class="orderNum">{{orderDatails.myId}}</text>
+    </view>
+    <view>创建时间:
+      <text class="orderNum">{{orderDatails.myCreattime}}</text>
+    </view>
+    <view wx:if="{{orderDatails.myState==2}}">付款时间:
+      <text class="orderNum">{{orderDatails.myPaytime}}</text>
+    </view>
+    <view wx:if="{{orderDatails.myState==3}}">成交时间:
+      <text class="orderNum">{{orderDatails.myFinishtime}}</text>
+    </view>
+  </view>
+</view>

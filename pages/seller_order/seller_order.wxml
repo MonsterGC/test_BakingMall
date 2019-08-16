@@ -1,0 +1,147 @@
+<view class="navTopList" bindtap="tabFun">
+  <view class="order-info {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">
+    全部
+  </view>
+  <view class="order-info {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">
+    待付款
+  </view>
+  <view class="order-info {{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">
+    待收货
+  </view>
+  <view class="order-info {{tabArr.curHdIndex=='3'? 'active' : ''}}" id="tab-hd04" data-id="3">
+    待签收
+  </view>
+  <view class="order-info {{tabArr.curHdIndex=='4'? 'active' : ''}}" id="tab-hd05" data-id="4">
+    已完成
+  </view>
+  <view class="order-info {{tabArr.curHdIndex=='5'? 'active' : ''}}" id="tab-hd06" data-id="5">
+    待评价
+  </view>
+</view>
+<!--全部订单  -->
+<view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}" wx:for='{{allorder}}' wx:key="{{item.id}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="productCount" wx:if="{{item.myState!=3}}">
+      <button class='btnorg' data-id="{{item.myId}}" catchtap='topay' wx:if="{{item.myState==1}}">去付款</button>
+      <button data-id="{{item.myId}}" catchtap='deleteOrderOne' wx:if="{{item.myState==1}}">取消订单</button>
+      <button class='btnorg' data-id="{{item.myId}}" catchtap='tobesure' wx:if="{{item.myState==2}}">确认收货</button>
+    </view>
+  </view>
+</view>
+<!--待付款  -->
+<view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}" wx:if="{{item.myState==1}}" wx:for='{{allorder}}' wx:key="{{item.myId}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="productCount">
+      <button class='btnorg' data-id="{{item.myId}}" catchtap='topay'>去付款</button>
+      <button data-id="{{item.myId}}" catchtap='deleteOrderOne'>取消订单</button>
+    </view>
+  </view>
+</view>
+<!--待收货  -->
+<view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}" wx:if="{{item.myState==2}}" wx:for='{{allorder}}' wx:key="{{item.myId}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="productCount">
+      <button class='btnorg' data-id="{{item.myId}}" catchtap='tobesure'>确认收货</button>
+    </view>
+  </view>
+</view>
+<!--待签收  -->
+<view class="right-item {{tabArr.curBdIndex=='3'? 'active' : ''}}" wx:if="{{item.myState==3}}" wx:for='{{allorder}}' wx:key="{{item.myId}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--已完成  -->
+<view class="right-item {{tabArr.curBdIndex=='4'? 'active' : ''}}" wx:if="{{item.myState==4}}" wx:for='{{allorder}}' wx:key="{{item.myId}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 待评价  -->
+<view class="right-item {{tabArr.curBdIndex=='5'? 'active' : ''}}" wx:if="{{item.myState==5}}" wx:for='{{allorder}}' wx:key="{{item.myId}}">
+  <view bindtap="toOrderDetail" class="orderDetails" id="{{item.myId}}">
+    <view wx:for="{{item.goodlist}}">
+      <view class="orderListDetails" id="{{item.goId}}">
+        <view class="productImg">
+          <image src="{{item.ogPicture}}"></image>
+        </view>
+        <view class="productInfo">
+          <view class="productTitle">{{item.goName}}</view>
+          <view>
+            <text class="productQuantity">×{{item.ogGoodsum}}</text>
+            <text class="productPrice">￥{{item.unit_all_price}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

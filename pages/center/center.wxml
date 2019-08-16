@@ -1,0 +1,77 @@
+<!--center.wxml-->
+<view class="container">
+  <image class='info-bg' mode='widthFix' src='../../images/img_bg_geren_touxiang.png'></image>
+  <view class="userinfo">
+    <block class='info' open-type="getUserInfo">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data class="userinfo-nickname" type="userNickName"></open-data>
+    </block>
+  </view>
+</view>
+
+<view>
+  <view class="fff module module1">
+
+    <view class="flex state">
+      <navigator url="../../pages/seller_order/seller_order?datasetId=1" hover-class="none">
+        <view class="stateItem icon-pay">
+          <text>待付款</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/seller_order/seller_order?datasetId=2" hover-class="none">
+        <view class="stateItem icon-deliver">
+          <text>待发货</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/seller_order/seller_order?datasetId=3" hover-class="none">
+        <view class="stateItem icon-send">
+          <text>待签收</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/seller_order/seller_order?datasetId=4" hover-class="none">
+        <view class="stateItem icon-goodsnew">
+          <text>已完成</text>
+        </view>
+      </navigator>
+      <navigator url="../../pages/seller_order/seller_order?datasetId=5" hover-class="none">
+        <view class="stateItem icon-post">
+          <text>待评价</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <view>
+    <view class="fff module module2">
+      <navigator url="../../pages/collection/collection" class="option arrows mui-icon-arrowright">
+        <text class="optionTitle collect icon-favorfill">收藏商品</text>
+      </navigator>
+      <navigator url="../../pages/index/index" class="option arrows mui-icon-arrowright">
+        <text class="optionTitle record icon-magic">优惠券</text>
+      </navigator>
+    </view>
+
+    <view class="fff module module3">
+      <view bindtap='qingcchuhuangcun' class="option arrows mui-icon-arrowright">
+        <text class="optionTitle idea .icon-hot">清除缓存</text>
+      </view>
+    </view>
+
+    <view class="fff module module3">
+      <navigator url="../../pages/address/address" class="option arrows mui-icon-arrowright">
+        <text class="optionTitle address icon-locationfill">管理我的收货地址</text>
+      </navigator>
+      <view class="option arrows mui-icon-arrowright" bindtap='tel'>
+        <text class="optionTitle address icon-locationfill">联系客服</text>
+      </view>
+    </view>
+
+    <view class="fff module module3">
+      <navigator url="../../pages/suggest/suggest" class="option arrows mui-icon-arrowright">
+        <text class="optionTitle idea icon-writefill">意见反馈</text>
+      </navigator>
+    </view>
+  </view>
+</view>

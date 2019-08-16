@@ -1,0 +1,77 @@
+page{
+  background: #fff;
+}
+.profile {
+  padding: 5px 15px;
+  font-size: 15px;
+}
+
+.contentbox {
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.contentbox>label {
+  width: 3.5rem;
+  text-align-last: justify;
+  color: #666;
+  margin-right: 20px;
+  position: relative;
+  margin-left: 5px;
+}
+
+.contentbox>label::after {
+  position: absolute;
+  content: ':';
+  color: #666;
+}
+
+.contentbox>input {
+  width: 76%;
+}
+
+.input-placeholder {
+  color: #D8D8D8;
+}
+
+.weui-cell{
+  padding: 10px 30px 10px 0px;
+}
+
+.weui-cell::before {
+  border-top: 0px;
+}
+
+.weui-cell__ft image {
+  width: 15px;
+  height: 15px;
+  margin: 0px 15px 0px 0px;
+}
+
+.weui-select {
+  border-right: 0px;
+}
+
+.contentbox > input.shengao{
+  width: 58%;
+}
+
+.intro-area{
+  border: 1px solid #E6E6E6;
+  padding: 8px;
+}
+
+.textarea-placeholder{
+  color: #E6E6E6;
+}
+
+.weui-textarea-counter{
+  color: #E6E6E6;
+}
+
+.weui-btn{
+  background: #fad03c;
+  color: #fff;
+  border: 1px solid #fad03c;
+}

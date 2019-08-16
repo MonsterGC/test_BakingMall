@@ -1,0 +1,45 @@
+<view>
+  <view class="cart-shop-list">
+
+    <!--购物车商品列表-->
+    <view wx:for="{{cartShopList}}">
+      <view class="cart-shop-info" data-item-index="{{index}}" bindtap="onItemClick">
+        <view class="select_all">
+          <checkbox></checkbox>
+        </view>
+        <view>
+          <image class="cart-shop-img" src="{{item.shopImg}}"></image>
+        </view>
+        <view class="cart-info-mess">
+          <view>
+            <text class="cart-shop-title">{{item.shopTitle}}</text>
+          </view>
+          <view>
+            <text class="select-info">{{item.shopSelectInfo}}</text>
+          </view>
+          <view class="cart-remark-num">
+            <text class="cart-shop-price">￥{{item.shopPrice}}</text>
+            <view class="cart-select">
+              <view class="option" data-index="{{index}}" catchtap="itemCountSub">-</view>
+              <view class="option">{{item.shopCount}}</view>
+              <view class="option" data-index="{{index}}" catchtap="itemCountAdd">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
+    </view>
+  </view>
+
+  <view class="bottom-pay">
+    <view class="select_all">
+      <checkbox></checkbox>全选</view>
+    <view class="total-count-money">合计:
+      <view>￥{{allPrice}}元</view>
+      <view class="yf_msg">不含运费</view>
+    </view>
+    <view>
+      <button class="btn-area-button" bindtap="goToPay">去支付</button>
+    </view>
+  </view>
+</view>

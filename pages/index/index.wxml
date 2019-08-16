@@ -1,0 +1,69 @@
+<!--index.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="100%" height="200" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="category">
+  <view class="category_item" wx:for="{{iconArray}}">
+    <view class="category_item_wrap">
+      <view class="icon_wrap">
+        <image src="{{item.iconUrl}}" class="index_icon"></image>
+      </view>
+      <view class="category_item_text">
+        <text>{{item.iconText}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='tell_me'>
+  <view class='tell_metwo'>
+    <image class='img_tell' src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565990490983&di=d287038b5afab565d448a6e802cad8d9&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2F3b7521a4e05eaa269b85d480f82032aa8536b423178cc-yUN5cQ_fw658'></image>
+  </view>
+  <view class='tell_mefour'>
+    <view class='tell_me01'>{{shuyu}}</view>
+    <view class='tell_me02'>{{teltoo}}</view>
+  </view>
+  <view class='tel_img'>
+    <image bindtap='tel' class='tell_me03' src='https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2792479808,1094485370&fm=26&gp=0.jpg'></image>
+    <button class="cs_button" hover-class='none' open-type="contact">
+      <image open-type="contact" class='tell_me03' src='https://blackboy.club/images/tel_01.png'></image>
+    </button>
+  </view>
+</view>
+
+<view class='youhui_bao'>
+  <view class='youhui_o1'>
+       <image style='width:375px;height:40px;' src='../../images/bao.jpg'></image>
+  </view>
+  <view wx:for="{{baokuang}}">
+    <view class='image_style'>
+      <view class='img_style'>
+        <image class='img_sty' src='{{item.url}}'></image>
+      </view>
+      <view class='flexx_box'>
+        <view class='text_box'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='jiage_box'>
+          <text class='jiage_zhu'>${{item.money}}</text>
+          <text class='jiage_ci'>${{item.money2}}</text>
+        </view>
+        <view style='display:flex;flex-direction:row'>
+          <view class='jiage_box'>
+            <view class='jiage_yl'>100预览</view>
+            <view class='jiage_yl'>1赞</view>
+            <view class='jiage_yl'>4评论</view>
+          </view>
+          <view>
+            <button bindtap='xiangchi' class='button_img'>想 吃></button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

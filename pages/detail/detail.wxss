@@ -1,0 +1,280 @@
+
+.container{
+	margin-bottom: 65px;
+}
+.banner{
+	width: 100%;
+	height: 600rpx;
+}
+.banner image{
+	width: 100%;
+	height: 100%;
+}
+.proMsg{
+	background-color: white;
+}
+.proMsg .proName{
+	padding: 20rpx 20rpx 10rpx;
+	font-size: 16px;
+	line-height: 22px; 
+	color: rgb(133, 130, 130);
+}
+.proMsg .price{
+	color: #ff2c00;
+	font-size: 14px;
+	margin-left: 20rpx;
+	line-height: 80rpx;
+}
+.proMsg .right{
+	color: #757575;
+  text-decoration:line-through;
+	font-size: 12px;
+	margin-left: 20rpx;
+	line-height: 80rpx;
+}
+.proMsg .salse{
+	display: flex;
+	padding: 10rpx 20rpx;
+	border-top: 10px solid #F4F4F4;
+  border-bottom: 10px solid #F4F4F4;
+	font-size: 15px;
+	color: #333;
+}
+.num{
+	font-size: 15px;
+	color: #333;
+  width: 100%;
+  padding: 10px;
+}
+.num>view{
+  align-content: center;
+}
+.num .sl{
+	float: left;
+}
+
+.num .buynum{
+    display: flex;
+    height: 40rpx;
+    width: 30%;
+    text-align: center;
+    line-height: 40rpx;
+    float: right;
+    color: #CCCCCC;
+    font-weight: bold;
+    font-size: 18px;
+}
+.num .buynum .nownum{
+    flex: 1;
+    border-left: 3rpx solid #CCCCCC;
+    border-right: 3rpx solid #CCCCCC;
+    font-weight: normal;
+    font-size: 16px;
+}
+.num .disnum,.num .addnum{
+    width: 40rpx;
+}
+
+/*热销产品*/
+.hot_product{
+	background-color: #fff;
+	line-height: 50px;
+	font-size: 15px;
+}
+.pro-title{
+  font-size: 15px;
+  display: flex;
+  width: 100%;
+  padding-left:10px;
+  border-bottom: 1px  #E0E0E0 solid;
+}
+.details_box{
+  width: 100%;
+}
+.zan_fu01{
+  color: #666;
+  font-size: 0.6rem;
+  height: 20px;
+}
+.hr{
+  width:800px;
+  height:1px;
+  margin:0px auto;
+  padding:0px;
+  overflow:hidden;
+  background:rgb(151, 150, 150);
+}
+.pinglung{
+  width: 96%;
+  margin-top: 10px;
+  height: 40px;
+  margin-left: 2%;
+}
+.zan_fu02{
+  display: flex;
+  flex-direction: row;
+  margin-top: -15px;
+  margin-left: 83%;
+}
+.zan_fu{
+  height: 40px;
+}
+.img_fu{
+  width: 25px;
+  height: 25px;
+}
+
+.details_box image{
+	width: 100%;
+	all:initia;
+}
+.explain{
+  border-top:10px solid #F4F4F4;
+  padding:10rpx 20rpx;
+  line-height: 25px;
+  font-size: 15px;
+}
+.explain text{
+  color: #878787;
+}
+.explain text.col-bla{
+  color: #333;
+}
+
+.bottom_item{
+	display: flex;
+  position: fixed;
+	bottom: 0;
+  height: 50px;
+	width: 100%;
+  justify-content: space-around;
+}
+.bottom_item .icon_service{
+	border-right: 1px solid #E0E0E0;
+  display:flex;
+  width:30%;
+  background-color: #fff;
+	color: #333;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  padding: 0 5px;
+}
+.bottom_item .icon_service2{
+	border-right: 1px solid #E0E0E0;
+  display:flex;
+  width:20%;
+  background-color: #fff;
+	color: #333;
+  padding: 0 5px;
+}
+.bottom_item .icon_service3{
+	border-right: 1px solid #E0E0E0;
+  display:flex;
+  width:15%;
+  background-color: #fff;
+	color: #333;
+  padding: 0 5px;
+}
+.bottom_item .icon_service image{
+	width: 40px;
+  height:40px;
+
+}
+.bottom_item .icon_service image.kefuimg{
+  width: 35px;
+  height:35px;
+
+}
+.btn2{
+  background: #fff;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn2::after{
+  border: 0px;
+  width: 50px;
+  height: 40px;
+}
+.bottom_item .icon_service.buy_btn{
+	background-color: #FF1500;
+  color: #fff;
+}
+.bottom_item .icon_service.buy_btn2{
+	background-color: rgb(230, 169, 39);
+  color: #fff;
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  padding: 8px 5px;
+}
+
+.add_item_show{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+}
+.add_item_show .buy_cont{
+	background-color: #fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.add_item_show .shopcar{
+	height: 120px;
+	padding: 10px;
+}
+.add_item_show .shopcar>view{
+	height: 60px;
+}
+.add_item_show .shopcar_top{
+	position: relative;
+	border-bottom: 1px solid #f3f3f3;
+}
+.add_item_show .shopcar_top>view{
+	float: left;
+}
+.add_item_show .pro_pic{
+	position: relative;
+	top: -30px;
+	width: 60px;
+	height: 60px;
+}
+.add_item_show .pro_pic image{
+	width: 100%;
+	height: 100%;
+}
+.add_item_show .shopcar_top .close{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	color: #ccc;
+	top: 0px;
+	right: 0px;
+}
+.add_item_show .shopcar_top .kucun{
+	font-size: 28rpx;
+	color: #333;
+}
+.add_item_show .shopcar_top .price{
+	font-size: 36rpx;
+	color: #ff6662;
+}
+
+.add_item_show .buy_cont .true_btn{
+	text-align: center;
+	padding: 15px;
+	font-size: 14px;
+	background-color: #ff6662;
+	color: #fff;
+}

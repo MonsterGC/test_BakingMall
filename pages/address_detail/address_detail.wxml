@@ -1,0 +1,30 @@
+<view class='profile'>
+  <view>
+
+    <view class='contentbox'>
+      <label>姓名</label>
+      <input class="weui-input" placeholder-style="color: #D8D8D8;" placeholder="请填写真实姓名" />
+    </view>
+
+    <view class='contentbox'>
+      <label>联系电话</label>
+      <input class="weui-input" type='number' placeholder-style="color: #D8D8D8;" placeholder="请输入联系电话" />
+    </view>
+
+    <view class='contentbox'>
+      <label>居住地址</label>
+      <view class="weui-cell__bd">
+        <picker mode="region" bindchange="bindCountryChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="weui-select weui-select_in-select-after">{{region[0]}}-{{region[1]}}-{{region[2]}}</view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='contentbox'>
+    <label>详细地址</label>
+    <input class="weui-input" placeholder-style="color: #D8D8D8;" placeholder="请填写详细地址" />
+  </view>
+  <view class="weui-btn-area">
+    <button class="weui-btn" bindtap="showTopTips">保存</button>
+  </view>
+</view>

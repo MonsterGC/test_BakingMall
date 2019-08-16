@@ -1,0 +1,18 @@
+<view class="address" wx:for="{{address}}" wx:key='{{index}}'>
+  <view class='add-info'>
+    <text>{{item.myManname}}</text>
+    <text>{{item.myMannumber}}</text>
+  </view>
+  <view>
+    <text>{{item.myManaddress}} | {{item.myMandetail}}</text>
+  </view>
+  <view class="productCount">
+    <button class='btnorg' bindtap='delItem' data-index='{{item.index}}'>删除</button>
+    <button class='btnorg' bindtap='addDetail'>编辑</button>
+    <radio checked='{{item.checked}}' color='#FF2C00'>设为默认</radio>
+  </view>
+</view>
+
+<view class='add'>
+<button>添加新地址</button>
+</view>

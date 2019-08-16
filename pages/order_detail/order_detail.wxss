@@ -1,0 +1,147 @@
+page{
+	background: #F4F4F4;
+}
+.allOrder {
+  height: 100rpx;
+  line-height: 100rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e0e0e0;
+  font-family: "iconfont";
+}
+
+.allOrder .allOrder-left {
+  margin-left: 20rpx;
+  float: left;
+  padding-left: 5px;
+  color: #333;
+}
+/*收货地址*/
+.address{
+	padding-left: 40rpx;
+  padding-right: 40rpx;
+  color: #636563;
+  font-size: 14px;
+  line-height: 70rpx;
+  background: #fff;
+}
+.add-info{
+  display: flex;
+  justify-content: space-between;
+}
+.add-mess{
+  margin-top: 20rpx;
+}
+.add-mess>view{
+  color:#979797;
+
+}
+/*订单详情*/
+
+.orderDetails .orderDetailsStatus{
+	padding-left: 40rpx;
+  padding-top: 40rpx;
+}
+.orderDetails .orderDetailsStatus>view{
+	line-height: 60rpx;
+	color: #636563;
+  font-size: 14px;
+}
+.orderDetails .orderDetailsStatus>view.price{
+  color: #999;
+  padding-right: 40rpx;
+}
+.orderDetails .orderDetailsStatus>view.priceFinal{
+  color: #333;
+  padding-right: 40rpx;
+}
+.orderDetails .orderDetailsStatus .priceNum{
+  color: #999;
+  float: right;
+}
+.orderDetails .orderDetailsStatus .priceNum2{
+  float: right;
+  color: #FF2E03;
+  font-weight: bold;
+}
+.orderDetails .orderDetailsStatus .orderNum{
+	color: #636563;
+}
+
+/*商品订单列表*/
+.orderDetails {
+  background: #fff;
+  border-top: 20rpx solid #f3f3f3;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.orderDetails:last-child{
+	border-bottom: 20rpx solid #f3f3f3;
+}
+.orderListDetails {
+  display: flex;
+  border-bottom: 1rpx solid #e0e0e0;
+  width: 100%;
+}
+
+.orderListDetails .productImg {
+  flex: 1;
+  margin: 30rpx 0 30rpx 20rpx;
+  width: 70px;
+  height: 70px;
+}
+
+.orderListDetails .productImg image {
+  width: 100%;
+  height: 100%;
+}
+
+.orderListDetails .productInfo {
+  flex: 3;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.orderListDetails .productInfo .productTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.orderListDetails .productInfo .productQuantity {
+  color: #999;
+}
+
+.orderListDetails .productInfo .productPrice {
+  float: right;
+  color: #999;
+}
+
+.productCount {
+  border-bottom: 1rpx solid #f3f3f3;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.productCount>button {
+  margin: 20rpx 15rpx;
+  font-size: 12px;
+  align-items: center;
+  border-radius: 15%;
+  border: 1px #ABABAB solid;
+  color:#333;
+  background: #fff;
+}
+.productCount>button.btnorg{
+  background: #FF2C00;
+  color: #fff;
+  border: 1px #FF2C00 solid;
+}

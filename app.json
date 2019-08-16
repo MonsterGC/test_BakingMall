@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/diy/diy",
+    "pages/shoppingCart/shoppingCart",
+    "pages/center/center",
+    "pages/order_detail/order_detail",
+    "pages/seller_order/seller_order",
+    "pages/pay/pay",
+    "pages/collection/collection",
+    "pages/suggest/suggest",
+    "pages/address/address",
+    "pages/address_detail/address_detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#F8F8FF",
+    "navigationBarTitleText": "零售商城",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor":"#69C3AA",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/shouye1.png",
+        "selectedIconPath":"images/shouye.png"
+      },
+      {
+        "pagePath": "pages/diy/diy",
+        "text": "特价超市",
+        "iconPath": "images/huodong1.png",
+        "selectedIconPath": "images/huodong.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "购物车",
+        "iconPath": "images/car1.png",
+        "selectedIconPath": "images/car.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "我的",
+        "iconPath": "images/wode1.png",
+        "selectedIconPath": "images/wode.png"
+      }
+    ]
+  }
+}

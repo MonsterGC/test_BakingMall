@@ -1,0 +1,32 @@
+<view class="active_block">
+  <view class="navTopList" bindtap="tabFun">
+    <view class="order-info">
+      <text class="ywc-txt {{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">DIY教程</text>
+    </view>
+    <view class="order-info">
+      <text class="dfk-txt {{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">自制DIY</text>
+    </view>
+  </view>
+
+  <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+    <view class="active_item" wx:for="{{activeItem}}">
+      <view>
+        <view class="section tc">
+          <video class="video" src="{{item.videoSrc}}" poster="{{item.videoPoster}}" controls autoplay="{{autoplay}}" bindplay="playandpause"></video>
+        </view>
+      </view>
+      <view class="active_goods_name">介绍介绍{{item.activeGoodsName}}</view>
+    </view>
+  </view>
+
+  <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+    <view class="active_item" wx:for="{{activeItem1}}">
+      <view>
+        <view class="section tc">
+          <video class="video" src="{{item.videoSrc1}}" poster="{{item.videoPoster1}}" controls autoplay="{{autoplay1}}" bindplay="playandpause"></video>
+        </view>
+      </view>
+      <view class="active_goods_name">介绍介绍{{item.activeGoodsName1}}</view>
+    </view>
+  </view>
+</view>

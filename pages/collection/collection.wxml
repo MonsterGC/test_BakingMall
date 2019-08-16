@@ -1,0 +1,12 @@
+<view class='trade-box'>
+  <view class='trade-list'>
+    <view class='trade' wx:for="{{tradeArray}}" wx:for-item="item" bindtap="tradeClick">
+      <image style='width:157px;height:157px;' src="{{item.tradeSrc}}"></image>
+      <text class='trade-title'>{{item.tradeTitle}}</text>
+      <view class='remark'>
+        <text>{{item.tradePrice}}</text>
+        <text class='salnum'>已售{{item.tradeSalnum}}件</text>
+      </view>
+    </view>
+  </view>
+</view>
